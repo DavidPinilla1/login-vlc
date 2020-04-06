@@ -1,0 +1,26 @@
+.loginContainer{
+    padding: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        input{
+            all:unset;
+            padding: 0.8em;
+            background-color: rgb(215, 254, 255);
+            border: solid black 2px;
+            margin: 0.2em;
+            border-radius: 0.3em;
+        }
+        .ng-invalid.ng-touched{
+            border: solid rgb(255, 119, 119) 2px;
+        }
+        .ng-valid{
+            border: solid green 2px;
+        }
+    }
+}

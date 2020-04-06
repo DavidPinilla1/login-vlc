@@ -1,0 +1,12 @@
+<header>
+    <span [routerLink]="['/']" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact:true}">Home</span>
+    
+    <div class="user" *ngIf="userService.user">
+        <span [routerLink]="['/profile']" routerLinkActive="is-active" >{{userService.user['name']}}</span>
+        <span (click)="logout()" >Logout</span>
+    </div>
+    <div class="guest"  *ngIf="!userService.user">
+        <span [routerLink]="['/login']" routerLinkActive="is-active" >Login</span>
+        <span [routerLink]="['/register']" routerLinkActive="is-active" >Registro</span>
+    </div>
+</header>
